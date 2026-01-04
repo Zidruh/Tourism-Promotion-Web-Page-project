@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #3e3a32;
+}
+
+/*Background*/
+.page-background {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/*Navigation bar*/
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.site-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.3rem;
+  color: #6b4f2c;
+  font-weight: bold;
+}
+
+.navbar-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #3e3a32;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+}
+
+.header h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 3rem;
+}
+
+.section {
+  background: #fffdf8;
+  margin: 40px 0;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/*history*/
+.history-content {
+  overflow: hidden;
+}
+
+.history-image {
+  float: left;
+  width: 40%;
+  max-width: 420px;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.history-text p {
+  line-height: 1.8;
+  text-align: justify;
+}
+
+video, img, audio {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/*activities*/
+.activities-holder {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.activities {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.activity-card {
+  background: #f3efe8;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.activity-description {
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+.price {
+  font-weight: bold;
+  color: #6b4f2c;
+}
+
+.activity-card button {
+  background: #6b4f2c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+/*cart*/
+.cart-sidebar {
+  position: sticky;
+  top: 120px;
+  width: 260px;
+  background: #fffdf8;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  font-size: 0.95rem;
+}
+
+.cart-sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: 'Merriweather', serif;
+  color: #6b4f2c;
+  text-align: center;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3efe8;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  gap: 8px;
+}
+
+.cart-item span {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #3e3a32;
+}
+
+.cart-item button {
+  background: #b4433c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.cart-item button:hover {
+  background: #8f342e;
+}
+
+.cart-total {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+  font-weight: bold;
+  text-align: right;
+  color: #6b4f2c;
+}
+
+/*footer*/
+.footer {
+  text-align: center;
+  color: white;
+  margin: 40px 0 20px;
+}
+
+@media (max-width: 768px) {
+  .history-image {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .activities-holder {
+    flex-direction: column;
+  }
+
+  .cart-sidebar {
+    width: 100%;
+    position: static;
+  }
+}
